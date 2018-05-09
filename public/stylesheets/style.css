@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  background-image: url("https://i.pinimg.com/originals/d9/53/f0/d953f00e555f7d5a628603e9bbe35f71.jpg"); }
+
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+.index {
+  background-image: url("/images/btn-image.jpg");
+  width: 150%;
+  height: 40px;
+  font-size: 120%;
+  font-family: 'Comic sans-serif'; }
+
+.container {
+  background-image: url("/images/dashboard-background.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding: 19.2%; }
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0 0; }
+
+.gutter {
+  width: 90%;
+  margin: 0 auto; }
+
+.flex-container {
+  display: flex; }
+
+.drill-container {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-between;
+  background-image: url("https://i.pinimg.com/originals/d9/53/f0/d953f00e555f7d5a628603e9bbe35f71.jpg"); }
+
+.drill-card:hover {
+  box-shadow: 0 10px 50px 0 black;
+  transition: 0.3s;
+  border-radius: 5px; }
+
+.drill-card {
+  flex: 0 1 28.33%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 30px;
+  background: white;
+  margin-top: 40px; }
+
+img.drill-img {
+  height: auto;
+  width: 100%;
+  max-height: 405px; }
+
+.drill-text {
+  text-align: center;
+  color: #244289; }
+
+.drill-links {
+  color: black; }
+
+.drill-details-container {
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  text-align: center;
+  padding-bottom: 2.0%;
+  flex-wrap: wrap; }
+
+.drills-details-description {
+  font-size: 100%;
+  padding-bottom: 5%;
+  color: #4e4e4e; }
+
+.drills-details-name {
+  font-size: 300%; }
+
+.ul-btn {
+  width: 20%; }
+
+.li-btn {
+  padding: 0.2%; }
+
+.auth-container {
+  display: flex;
+  align-self: flex-end;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; }
+
+.auth-form {
+  padding-bottom: 14%;
+  padding-top: 5%; }
+
+.auth-username-password-div {
+  flex-direction: column;
+  display: flex;
+  align-items: center; }
+
+.auth-label-username-password {
+  padding: 1%; }
+
+.auth-username-password {
+  width: 10%; }
+
+.auth-btn {
+  padding-top: 2%; }
+
+.auth-btn-signup-login {
+  height: 25px;
+  width: 10%;
+  font-size: 90%; }
+
+.auth-already-have-acc {
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.auth-already-have-acc-btn {
+  width: 10%;
+  height: 25px;
+  font-size: 90%; }
+
+.auth-img {
+  width: 20%;
+  align-self: center;
+  align-content: flex-end; }
+
+/*# sourceMappingURL=style.css.map */
