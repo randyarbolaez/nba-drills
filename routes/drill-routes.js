@@ -7,13 +7,13 @@ const Drill = require('../models/drill-model');
 // });
 
 router.get('/', (req, res, next) => {
-  // Drill.find()
-  // .then(drills => {
-  res.render('drill/drill-index', { list: drills });
-  // })
-  // .catch(error => {
-  //   console.log(error);
-  // });
+  Drill.find()
+    .then(drills => {
+      res.render('drill/drill-index', { list: drills });
+    })
+    .catch(error => {
+      console.log(error);
+    });
 });
 
 router.get('/:drills', (req, res, next) => {
