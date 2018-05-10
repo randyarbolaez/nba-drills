@@ -12,7 +12,7 @@ function ensureAuthenticated(req, res, next) {
     return next();
   } else {
 
-    res.redirect('/login')
+    res.redirect('/signup-login')
   }
 }
 

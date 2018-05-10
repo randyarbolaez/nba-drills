@@ -10,20 +10,20 @@ const ensureLogin = require("connect-ensure-login");
 const session = require("express-session");
 const flash = require('connect-flash')
 
-router.get('/signup', (req, res, next) => {
-  res.render('auth/signup');
+router.get('/signup-login', (req, res, next) => {
+  res.render('auth/signup-login');
 });
 
 router.post('/signup', (req, res, next) => {
   const username = req.body.username;
   const password = req.body.password;
   if (username === '' || password === '') {
-    res.render('auth/signup')
+    res.render('auth/signup-login')
     return;
   }
   User.findOne({ username: username }, "username", (err, user) => {
     if (user !== null) {
-      res.render("auth/signup")
+      res.render("auth/signup-login")
       return;
     }
 
@@ -37,42 +37,22 @@ router.post('/signup', (req, res, next) => {
 
     newUser.save(err => {
       if (err) {
-        res.render('auth/signup')
+        res.render('auth/signup-login')
       } else {
-        res.redirect('/login');
+        res.redirect('/');
       }
     })
   });
 });
 
-router.get("/login", (req, res, next) => {
-  res.render("auth/login");
-});
-
 router.post("/login", passport.authenticate("local",
   {
     successRedirect: "/entries",
-    failureRedirect: "/login",
+    failureRedirect: "/signup-login",
     failureFlash: true,
     passReqToCallback: false
   }
 ));
-
-function ensureAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) {
-    return next();
-  } else {
-    res.redirect("/login");
-  }
-};
-
-// router.get('/entries', (req, res) => {
-//   res.render('entries/entries-index', { user: req.user });
-// });
-
-// router.get('/entries', (req, res, next) => {
-//   res.render('entries/entries-index', { user: req.user });
-// });
 
 router.get("/logout", (req, res) => {
   req.logout();

@@ -92,7 +92,7 @@ img {
   // flex-wrap:wrap;
   align-content: space-between;
   background-image:url("https://i.pinimg.com/originals/d9/53/f0/d953f00e555f7d5a628603e9bbe35f71.jpg");
-
+  padding-bottom: 3%;
 }
 
 .drill-card:hover{
@@ -119,7 +119,7 @@ img.drill-img {
 
 .drill-text{
   text-align: center;
-  color: #244289;
+  color: #C9C9C9;
 }
 
 .drill-links{
@@ -239,7 +239,7 @@ h1, input {
   height: 50px;
   display: block;
   margin: 30px auto 30px;
-  color: white;
+  color: #C9C9C9;
   background-color: rgb(189, 45, 84);
   border: none;
   -webkit-box-shadow: 0 5px 0 rgb(189, 45, 84);
@@ -554,12 +554,12 @@ footer p {
   margin:20px 0;
   text-decoration:none;
   text-transform:uppercase;
-  color:#262626;
+  color:#C9C9C9;
   font-weight:bold;
   transition:.5s;
 }
 .ul-entry .li-entry .a-entry:hover {
-  color:#fff;
+  color:#9C2F4C;
   text-decoration:none;
 }
 .ul-entry .li-entry .a-entry:before {
@@ -569,8 +569,8 @@ footer p {
   left:0;
   width:100%;
   height:97%;
-  border-top:1px solid rgb(255, 0, 0);
-  border-bottom:1px solid rgb(255, 0, 0);
+  border-top:1px solid #9C2F4C;
+  border-bottom:1px solid #9C2F4C;
   transform: scaleY(2);
   opacity:0;
   transition:.5s;
@@ -653,6 +653,10 @@ body.modal-open #wrap{
 .container-modal{
   background-color:rgba(61, 61, 61, 0.5);;
 
+}
+
+.signup-login-container{
+  padding-top: 3%;
 }
 
 
