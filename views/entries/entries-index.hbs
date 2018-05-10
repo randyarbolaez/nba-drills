@@ -1,15 +1,29 @@
-<h1>CREATE AN ACCOUNT</h1>
+<ul class="ul-entry">
+  <li class="li-entry">
+    <a class="a-entry" href="/entries/new">Input Entry</a>
+  </li>
+</ul>
 
-<form id="form" action="/entries/new" method="post">
-  {{User.username}}
-  <input type="password" name="password" placeholder="Password">
-  <label for="password">Date</label>
-  <input type="password" name="password" placeholder="Password">
-  <label for="password">Password</label>
-  <input type="password" name="password" placeholder="Password">
+{{#each Entries}}
+<div class="container-entry">
 
-
-
-
-  <button>CREATE NEW ENTRY</button>
-</form>
+  <div class="row mb-5" style="
+    margin-right: 0px;
+">
+    <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+      <div class="card card-inverse card-info">
+        <img class="card-img-top" src="https://img00.deviantart.net/dad3/i/2015/034/6/7/michael_jordan__legend__wallpaper_by_newtdeigns-d8glpr0.png">
+        <div class=" card-block ">
+          <h4 class="card-title mt-3 ">{{this.drill}}</h4>
+          <div class="meta card-text ">
+            <a>{{this.date}}</a>
+          </div>
+          <div class="card-text ">
+            {{this.entry}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}

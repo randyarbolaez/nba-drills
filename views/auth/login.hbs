@@ -1,28 +1,12 @@
-<div class="auth-container">
-  <form class="auth-form" id="form" action="/login" method="POST">
-    <div class="auth-username-password-div">
-      <label class="auth-label-username-password" for="username">Username</label>
-      <input class="auth-username-password" type="text" name="username" placeholder="Username">
-      <label class="auth-label-username-password" for="password">Password</label>
-      <input class="auth-username-password" type="password" name="password" placeholder="Password">
-    </div>
-
-    <div class="auth-message">
-      {{#if message}} {{ message }} {{/if}}
-    </div>
-    <div class="auth-btn">
-      <button class="auth-btn-signup-login">LOG IN</button>
-    </div>
-
-
-    <div class="auth-already-have-acc">
-      <a href="/signup">
-        DON'T HAVE AN ACCOUNT?
-        <button class="auth-already-have-acc-btn">SIGN UP</a>
-      </button>
-    </div>
-  </form>
-  <a href="http://nba.com">
-    <img class="auth-img" src="https://seeklogo.com/images/N/nba-logo-41668C66DB-seeklogo.com.png" alt="">
-  </a>
+<div class="col-md-6">
+  <div id="logbox">
+    <form method="POST" action="/login">
+      <h1>account login</h1>
+      <label for="username"></label>
+      <input type="text" name="username" placeholder="enter your username" class="input pass" />
+      <label for="password"></label>
+      <input type="password" name="password" placeholder="enter your password" required="required" class="input pass" />
+      <input type="submit" value="Log in!" class="inputButton" />
+    </form>
+  </div>
 </div>
