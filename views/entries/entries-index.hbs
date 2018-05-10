@@ -4,26 +4,16 @@
   </li>
 </ul>
 
-{{#each Entries}}
-<div class="container-entry">
 
-  <div class="row mb-5" style="
-    margin-right: 0px;
-">
-    <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
-      <div class="card card-inverse card-info">
-        <img class="card-img-top" src="https://img00.deviantart.net/dad3/i/2015/034/6/7/michael_jordan__legend__wallpaper_by_newtdeigns-d8glpr0.png">
-        <div class=" card-block ">
-          <h4 class="card-title mt-3 ">{{this.drill}}</h4>
-          <div class="meta card-text ">
-            <a>{{this.date}}</a>
-          </div>
-          <div class="card-text ">
-            {{this.entry}}
-          </div>
-        </div>
-      </div>
+<div class="gutter">
+  <div class=" flex-container entry-container ">
+    {{#each Entries}}
+    <div class="entry-card ">
+      <a class="drill-links " href="#">
+        <img class="drill-img " src="http://i52.tinypic.com/2h7qwk8.jpg">
+        <h3 class="drill-text ">{{this.date}}</h3>
+      </a>
     </div>
+    {{/each}}
   </div>
 </div>
-{{/each}}
