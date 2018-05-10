@@ -57,7 +57,8 @@ img {
   justify-content: space-evenly;
   align-content: space-between;
   background-image: url("https://i.pinimg.com/originals/d9/53/f0/d953f00e555f7d5a628603e9bbe35f71.jpg");
-  padding-bottom: 3%; }
+  padding-bottom: 3%;
+  padding-top: 4%; }
 
 .drill-card:hover {
   box-shadow: 0 10px 50px 0 black;
@@ -101,7 +102,8 @@ img.drill-img {
   text-align: justify; }
 
 .drills-details-name {
-  font-size: 300%; }
+  font-size: 300%;
+  padding-top: 75px; }
 
 .ul-btn {
   text-align: center; }
@@ -516,7 +518,7 @@ footer p {
   margin: 0 auto;
   text-align: center;
   padding-bottom: 30px;
-  background: white;
+  background: #fff;
   margin-top: 40px; }
 
 .entry-img {
@@ -547,5 +549,35 @@ body.modal-open #wrap {
 
 .signup-login-container {
   padding-top: 3%; }
+
+.flag {
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  padding-top: 15px;
+  position: relative;
+  background: #4e4e4e;
+  color: #C9C9C9;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  list-style: none; }
+
+.flag:before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0; }
+
+.flag:after {
+  content: ' ';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0; }
 
 /*# sourceMappingURL=style.css.map */

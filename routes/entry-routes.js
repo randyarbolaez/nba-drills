@@ -43,4 +43,13 @@ router.post('/create', ensureAuthenticated, (req, res, next) => {
   })
 });
 
+
+router.post('/delete/:entryDelete', (req, res, next) => {
+  Entry.findByIdAndRemove(req.params.entryDelete)
+    .then(Entry => { })
+    .catch(error => {
+      console.log(error);
+    });
+  res.redirect('/entries');
+});
 module.exports = router;
