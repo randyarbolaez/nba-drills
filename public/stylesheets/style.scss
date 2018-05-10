@@ -542,6 +542,7 @@ footer p {
   margin:0;
   padding:0;
   display:flex;
+  font-size: 19px;
 }
 .ul-entry .li-entry {
   list-style:none;
@@ -567,9 +568,9 @@ footer p {
   top:0;
   left:0;
   width:100%;
-  height:100%;
-  border-top:1px solid #000;
-  border-bottom:1px solid #000;
+  height:97%;
+  border-top:1px solid rgb(255, 0, 0);
+  border-bottom:1px solid rgb(255, 0, 0);
   transform: scaleY(2);
   opacity:0;
   transition:.5s;
@@ -618,5 +619,29 @@ footer p {
   margin-top: 40px;
 }
 
+// MODAL
+body.modal-open #wrap{
+  -webkit-filter: blur(7px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
+}
 
+.modal-backdrop {background-color: white;}
+
+.close {
+  font-size: 50px;
+  display:block;
+}
+
+.myModal{
+  color:rgb(255, 255, 255);
+}
+
+
+.container-modal{
+  background-color:rgba(61, 61, 61, 0.5);;
+
+}
 
