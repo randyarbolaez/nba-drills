@@ -579,4 +579,17 @@ body.modal-open #wrap {
   width: 0;
   height: 0; }
 
+@media (max-width: 768px) {
+  .ul-entry .li-entry .a-entry {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #C9C9C9;
+    font-weight: bold;
+    transition: .5s;
+    margin-bottom: 50px; } }
+
 /*# sourceMappingURL=style.css.map */
