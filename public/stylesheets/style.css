@@ -502,7 +502,7 @@ footer p {
   transform: scale(1); }
 
 .entry-container {
-  padding-top: 8%;
+  padding-top: 10%;
   padding-bottom: 8%;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -554,7 +554,6 @@ body.modal-open #wrap {
   width: 200px;
   height: 50px;
   margin: 0 auto;
-  padding-top: 15px;
   position: relative;
   background: #4e4e4e;
   color: #C9C9C9;
