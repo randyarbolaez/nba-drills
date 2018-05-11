@@ -1,11 +1,13 @@
 <div class="gutter">
   <div class=" flex-container drill-container ">
     {{#each list}}
-    <div class="drill-card ">
-      <a class="drill-links " href="/drills/{{this._id}} ">
-        <img class="drill-img " src="{{this.img}} ">
-        <h3 class="drill-text ">{{this.name}}</h3>
-      </a>
+    <div class="col-sm-6  col-md-4">
+      <div class="drill-card">
+        <a class="drill-links " href="/drills/{{this._id}} ">
+          <img class="drill-img " src="{{this.img}} ">
+          <h3 class="drill-text ">{{this.name}}</h3>
+        </a>
+      </div>
     </div>
     {{/each}}
   </div>

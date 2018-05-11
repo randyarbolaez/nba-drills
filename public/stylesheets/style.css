@@ -1,8 +1,6 @@
 * {
   box-sizing: border-box; }
 
-.navbar {
-  background-color: black; }
 
 .nav-link {
   color: #C9C9C9; }
@@ -14,13 +12,13 @@
   background-color: #C9C9C9; }
 
 body {
-  padding: 50px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0 auto;
-  padding: 0;
   width: 100%;
   background-image: url("https://i.pinimg.com/originals/d9/53/f0/d953f00e555f7d5a628603e9bbe35f71.jpg");
-  padding-bottom: 2%; }
+}
 
 a {
   text-decoration: none;
@@ -49,13 +47,8 @@ img {
   width: 90%;
   margin: 0 auto; }
 
-.flex-container {
-  display: flex; }
 
 .drill-container {
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-content: space-between;
   background-image: url("https://i.pinimg.com/originals/d9/53/f0/d953f00e555f7d5a628603e9bbe35f71.jpg");
   padding-bottom: 3%;
   padding-top: 4%; }
@@ -66,12 +59,12 @@ img {
   border-radius: 5px; }
 
 .drill-card {
-  flex: 0 1 28.33%;
   margin: 0 auto;
   text-align: center;
   padding-bottom: 30px;
   background: white;
-  margin-top: 40px; }
+  margin-top: 40px;
+}
 
 img.drill-img {
   height: auto;
@@ -83,7 +76,13 @@ img.drill-img {
   color: #C9C9C9; }
 
 .drill-links {
-  color: black; }
+  color: black;
+}
+
+.drill-links:hover {
+  text-decoration: none;
+}
+
 
 .drill-details-container {
   align-items: center;
@@ -201,9 +200,11 @@ a {
 .login-wrap {
   width: 100%;
   margin: auto;
-  max-width: 35%;
-  min-height: 645px;
-  position: relative;
+  max-width: 400px;
+  height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-content: center;
   background: url(https://i.pinimg.com/originals/66/c2/73/66c2732c49b029d06a374fd195a2de43.png) no-repeat center;
   background-size: cover;
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
@@ -211,9 +212,9 @@ a {
 .login-html {
   width: 100%;
   height: 100%;
-  position: absolute;
-  padding: 90px 70px 50px 70px;
-  background: rgba(0, 0, 0, 0.5); }
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+}
 
 .login-html .sign-in-htm,
 .login-html .for-pwd-htm {
@@ -237,7 +238,10 @@ a {
 .login-html .tab,
 .login-form .group .label,
 .login-form .group .button {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #757575;
+  cursor: pointer;
+}
 
 .login-html .tab {
   font-size: 22px;
@@ -258,7 +262,8 @@ a {
   -webkit-perspective: 1000px;
   perspective: 1000px;
   -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
+  transform-style: preserve-3d;
+}
 
 .login-form .group {
   margin-bottom: 15px; }
@@ -443,17 +448,13 @@ footer p {
   line-height: 100%; }
 
 .ul-entry {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
   padding: 0;
-  display: flex;
+  text-align: center;
   font-size: 19px; }
 
 .ul-entry .li-entry {
-  list-style: none; }
+  list-style: none;
+}
 
 .ul-entry .li-entry .a-entry {
   position: relative;
@@ -502,8 +503,6 @@ footer p {
   transform: scale(1); }
 
 .entry-container {
-  padding-top: 10%;
-  padding-bottom: 3%;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: space-between; }
@@ -524,7 +523,7 @@ footer p {
 .entry-img {
   height: auto;
   width: 100%;
-  max-height: 405px;
+  max-height: 350px;
   opacity: 0.8; }
 
 body.modal-open #wrap {
@@ -554,7 +553,6 @@ body.modal-open #wrap {
   width: 200px;
   height: 50px;
   margin: 0 auto;
-  padding-top: 15px;
   position: relative;
   background: #4e4e4e;
   color: #C9C9C9;
