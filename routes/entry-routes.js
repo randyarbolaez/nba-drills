@@ -1,31 +1,33 @@
 const express = require('express');
 const router = express.Router();
-const passport = require("passport");
+const passport = require('passport');
 const User = require('../models/user-model');
 const Entry = require('../models/entry-model');
 const ensureLogin = require('connect-ensure-login');
 // const session = require("express-session");
 
+//MAKE SURE USER IS LOGGED IN
 function ensureAuthenticated(req, res, next) {
-  console.log("user? :", req.user)
+  console.log('user? :', req.user);
   if (req.isAuthenticated()) {
     return next();
   } else {
-
-    res.redirect('/signup-login')
+    res.redirect('/signup-login');
   }
 }
+//MAKE SURE USER IS LOGGED IN
 
 router.get('/', ensureAuthenticated, (req, res, next) => {
   Entry.find({ user: req.user._id }, (err, myEntries) => {
-    if (err) { return next(err); }
+    if (err) {
+      return next(err);
+    }
     res.render('entries/entries-index', { Entries: myEntries });
   });
-
 });
 
 router.get('/new', ensureAuthenticated, (req, res, next) => {
-  res.render('entries/entries-new')
+  res.render('entries/entries-new');
 });
 
 router.post('/create', ensureAuthenticated, (req, res, next) => {
@@ -34,19 +36,19 @@ router.post('/create', ensureAuthenticated, (req, res, next) => {
     date: req.body.date,
     entry: req.body.entry,
     user: req.user._id,
-  })
+  });
   newEntry.save(err => {
-    if (err) { return next(err); }
-    else {
+    if (err) {
+      return next(err);
+    } else {
       res.redirect('/entries');
     }
-  })
+  });
 });
-
 
 router.post('/delete/:entryDelete', (req, res, next) => {
   Entry.findByIdAndRemove(req.params.entryDelete)
-    .then(Entry => { })
+    .then(Entry => {})
     .catch(error => {
       console.log(error);
     });
