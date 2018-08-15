@@ -16,7 +16,6 @@ function ensureAuthenticated(req, res, next) {
   }
 }
 //MAKE SURE USER IS LOGGED IN
-
 router.get('/', ensureAuthenticated, (req, res, next) => {
   Entry.find({ user: req.user._id }, (err, myEntries) => {
     if (err) {
@@ -26,10 +25,12 @@ router.get('/', ensureAuthenticated, (req, res, next) => {
   });
 });
 
+//CREATE ENTRY(FORM)
 router.get('/new', ensureAuthenticated, (req, res, next) => {
   res.render('entries/entries-new');
 });
 
+//CREATE ENTRY
 router.post('/create', ensureAuthenticated, (req, res, next) => {
   const newEntry = new Entry({
     drill: req.body.drill,
@@ -46,6 +47,7 @@ router.post('/create', ensureAuthenticated, (req, res, next) => {
   });
 });
 
+//DELETE ENTRY
 router.post('/delete/:entryDelete', (req, res, next) => {
   Entry.findByIdAndRemove(req.params.entryDelete)
     .then(Entry => {})

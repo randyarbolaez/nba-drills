@@ -2,10 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Drill = require('../models/drill-model');
 
-// router.get('/', (req, res, next) => {
-//   res.render('drill/drill-index');
-// });
-
+// GET DASHBOARD(HOMEPAGE)
 router.get('/', (req, res, next) => {
   Drill.find()
     .then(drills => {
@@ -16,10 +13,11 @@ router.get('/', (req, res, next) => {
     });
 });
 
+// GET ALL DRILLS
 router.get('/:drills', (req, res, next) => {
   Drill.findById(req.params.drills)
     .then(response => {
-      console.log(response)
+      console.log(response);
       res.render('drill/drill-details', { list: response });
     })
     .catch(error => {
@@ -27,6 +25,5 @@ router.get('/:drills', (req, res, next) => {
       next();
     });
 });
-
 
 module.exports = router;
